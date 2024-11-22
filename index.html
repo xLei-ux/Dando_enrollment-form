@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2d2d2d;
+            color: #eaeaea;
+        }
+        h1 {
+            text-align: center;
+            color: #4c8dd8;
+            padding-top: 20px;
+        }
+        h3 {
+            color: #f4c542;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        form {
+            background-color: #3a3a3a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 550px;
+            flex: 1;
+            min-width: 300px;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #555;
+            color: #eaeaea;
+            font-size: 14px;
+        }
+        form input[type="radio"], form input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        form button {
+            background-color: #4c8dd8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #3578a3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            flex: 1;
+            min-width: 300px;
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        table, th, td {
+            border: 1px solid #444;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background-color: #4c8dd8;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #444;
+        }
+        tbody tr:hover {
+            background-color: #555;
+        }
+        label {
+            font-weight: bold;
+            color: #f4c542;
+        }
+        form div {
+            margin-bottom: 12px;
+        }
+        form input:focus, form select:focus, form textarea:focus {
+            border-color: #f4c542;
+            background-color: #444;
+        }
+        tbody tr:hover {
+            background-color: #3578a3;
+        }
+        table {
+            max-height: 400px;
+            overflow-y: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Enrollment Form</h1>
+    <h3>Instructions:</h3>
+    <ol>
+        <li>Fill in the form fields.</li>
+        <li>Check your interests.</li>
+        <li>Click "Enroll Now" to submit.</li>
+    </ol>
+
+    <div class="container">
+        <form action="#" method="post">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div>
+                <label>Sex:</label>
+                <input type="radio" id="male" name="sex" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="sex" value="Female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <div>
+                <label for="course">Course Options:</label>
+                <select id="course" name="course" required>
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSSW">BSSW</option>
+                    <option value="BSPA">BSPA</option>
+                    <option value="BSCS">BSCS</option>
+                    <option value="DHRS">DHRS</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Interests:</label><br>
+                <input type="checkbox" id="web" name="interests" value="Web Development">
+                <label for="web">Web Development</label><br>
+                <input type="checkbox" id="data" name="interests" value="Data Science">
+                <label for="data">Data Science</label><br>
+                <input type="checkbox" id="network" name="interests" value="Networking">
+                <label for="network">Networking</label><br>
+                <input type="checkbox" id="design" name="interests" value="Graphic Design">
+                <label for="design">Graphic Design</label><br><br>
+            </div>
+
+            <button type="submit">Enroll Now</button>
+        </form>
+
+        <div>
+            <h3>Enrolled Students:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Course</th>
+                        <th>Interests</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>example1</td>
+                        <td>lei1@example.com</td>
+                        <td>21</td>
+                        <td>Male</td>
+                        <td>BSIT</td>
+                        <td>Web Development, Data Science</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>example2</td>
+                        <td>Lei2@example.com</td>
+                        <td>23</td>
+                        <td>Female</td>
+                        <td>BSSW</td>
+                        <td>Graphic Design</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>example3</td>
+                        <td>lei3@example.com</td>
+                        <td>25</td>
+                        <td>Male</td>
+                        <td>BSPA</td>
+                        <td>Networking</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>example4</td>
+                        <td>lei4@example.com</td>
+                        <td>20</td>
+                        <td>Female</td>
+                        <td>BSCS</td>
+                        <td>Web Development</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>example6</td>
+                        <td>lei6@example.com</td>
+                        <td>22</td>
+                        <td>Male</td>
+                        <td>BSIT</td>
+                        <td>Data Science, Networking</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
